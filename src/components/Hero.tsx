@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { ArrowRight, Download } from 'lucide-react';
-
 const Hero = () => {
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -21,8 +18,7 @@ const Hero = () => {
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
             <span className="bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-              Sounak
-            </span>
+Sounak</span>
             <br />
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Maiti
@@ -39,10 +35,7 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-500">
-            <a
-              href="#projects"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
-            >
+            <a href="#projects" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg text-white font-medium hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
               Explore My Work
               <ArrowRight className="ml-2" size={20} />
             </a>
@@ -59,17 +52,11 @@ const Hero = () => {
           <div className="relative">
             <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-1 animate-pulse">
               <div className="w-full h-full rounded-full overflow-hidden">
-                <img 
-                  src="/lovable-uploads/6610cca9-c748-4b71-8126-08d8188b2884.png" 
-                  alt="Sounak Maiti - Profile Picture" 
-                  className="w-full h-full object-cover rounded-full"
-                  onError={(e) => {
-                    console.log('Image failed to load:', e);
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center"><div class="text-6xl text-gray-600">👨‍💻</div></div>';
-                  }}
-                  onLoad={() => console.log('Image loaded successfully')}
-                />
+                <img src="/lovable-uploads/6610cca9-c748-4b71-8126-08d8188b2884.png" alt="Sounak Maiti - Profile Picture" className="w-full h-full object-cover rounded-full" onError={e => {
+                console.log('Image failed to load:', e);
+                e.currentTarget.style.display = 'none';
+                e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center"><div class="text-6xl text-gray-600">👨‍💻</div></div>';
+              }} onLoad={() => console.log('Image loaded successfully')} />
               </div>
             </div>
             
@@ -83,8 +70,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;

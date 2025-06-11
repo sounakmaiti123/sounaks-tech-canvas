@@ -57,16 +57,16 @@ const Hero = () => {
         {/* Profile Picture */}
         <div className="flex justify-center lg:justify-end">
           <div className="relative">
-            <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-1 animate-pulse">
-              <div className="w-full h-full rounded-2xl overflow-hidden">
+            <div className="w-80 h-80 rounded-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-1 animate-pulse">
+              <div className="w-full h-full rounded-full overflow-hidden">
                 <img 
                   src="/lovable-uploads/6610cca9-c748-4b71-8126-08d8188b2884.png" 
                   alt="Sounak Maiti - Profile Picture" 
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-cover rounded-full"
                   onError={(e) => {
                     console.log('Image failed to load:', e);
                     e.currentTarget.style.display = 'none';
-                    e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full rounded-2xl bg-gray-800 flex items-center justify-center"><div class="text-6xl text-gray-600">👨‍💻</div></div>';
+                    e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center"><div class="text-6xl text-gray-600">👨‍💻</div></div>';
                   }}
                   onLoad={() => console.log('Image loaded successfully')}
                 />

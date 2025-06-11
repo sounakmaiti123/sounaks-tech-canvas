@@ -58,8 +58,12 @@ const Hero = () => {
         <div className="flex justify-center lg:justify-end">
           <div className="relative">
             <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-1 animate-pulse">
-              <div className="w-full h-full rounded-2xl bg-gray-800 flex items-center justify-center overflow-hidden">
-                <div className="text-6xl text-gray-600">👨‍💻</div>
+              <div className="w-full h-full rounded-2xl overflow-hidden">
+                <img 
+                  src="https://www.imghippo.com/i/KWj9193OVc.jpeg" 
+                  alt="Sounak Maiti - Profile Picture" 
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
             </div>
             

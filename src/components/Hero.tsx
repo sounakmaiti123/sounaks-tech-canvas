@@ -60,9 +60,15 @@ const Hero = () => {
             <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-1 animate-pulse">
               <div className="w-full h-full rounded-2xl overflow-hidden">
                 <img 
-                  src="https://www.imghippo.com/i/KWj9193OVc.jpeg" 
+                  src="https://i.imghippo.com/files/KWj9193OVc.jpeg" 
                   alt="Sounak Maiti - Profile Picture" 
                   className="w-full h-full object-cover rounded-2xl"
+                  onError={(e) => {
+                    console.log('Image failed to load:', e);
+                    e.currentTarget.style.display = 'none';
+                    e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full rounded-2xl bg-gray-800 flex items-center justify-center"><div class="text-6xl text-gray-600">👨‍💻</div></div>';
+                  }}
+                  onLoad={() => console.log('Image loaded successfully')}
                 />
               </div>
             </div>

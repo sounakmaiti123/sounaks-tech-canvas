@@ -60,7 +60,7 @@ const Hero = () => {
             <div className="w-80 h-80 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-1 animate-pulse">
               <div className="w-full h-full rounded-2xl overflow-hidden">
                 <img 
-                  src="https://i.imghippo.com/files/KWj9193OVc.jpeg" 
+                  src="/lovable-uploads/6610cca9-c748-4b71-8126-08d8188b2884.png" 
                   alt="Sounak Maiti - Profile Picture" 
                   className="w-full h-full object-cover rounded-2xl"
                   onError={(e) => {

@@ -24,7 +24,7 @@ const Contact = () => {
       // Send email using EmailJS
       const result = await emailjs.send(
         'service_x608g63', // Your service ID
-        'template_default', // You'll need to create a template in EmailJS dashboard
+        'default', // Your template ID
         {
           from_name: formData.name,
           from_email: formData.email,

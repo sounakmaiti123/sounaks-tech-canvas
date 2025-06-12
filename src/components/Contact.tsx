@@ -129,8 +129,8 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-gray-300 font-medium mb-2">Email Address
-[Getting Error! don't worry. Simply Copy the Email address and send me directly using Gmail]</label>
+                <label htmlFor="email" className="block text-gray-300 font-medium mb-2">Email Address:
+ [Getting Error! don't worry. Simply Copy the Email address from the contact details and send me directly using Gmail]</label>
                 <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required disabled={isLoading} className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors disabled:opacity-50" placeholder="Enter your email" />
               </div>
 

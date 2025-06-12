@@ -135,7 +135,7 @@ const Contact = () => {
 
               <div>
                 <label htmlFor="message" className="block text-gray-300 font-medium mb-2">Message
-[ Getting Error! don't worry. Simply Copy the Email address and send me directly using Gmail ]</label>
+ [ Getting Error! don't worry. Simply Copy the Email address and send me directly using Gmail ]</label>
                 <textarea id="message" name="message" value={formData.message} onChange={handleChange} required disabled={isLoading} rows={5} className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 transition-colors resize-none disabled:opacity-50" placeholder="Tell me about your project or just say hello..." />
               </div>
 

@@ -1,7 +1,10 @@
 import React from 'react';
 import { ArrowRight, Download } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
-  return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -37,10 +40,10 @@ const Hero = () => {
               <ArrowRight className="ml-2" size={20} />
             </a>
             
-            <button className="inline-flex items-center px-8 py-3 border border-gray-600 rounded-lg text-gray-300 font-medium hover:border-blue-400 hover:text-blue-400 transition-all duration-300 hover:scale-105">
+            <Link to="/resume" className="inline-flex items-center px-8 py-3 border border-gray-600 rounded-lg text-gray-300 font-medium hover:border-blue-400 hover:text-blue-400 transition-all duration-300 hover:scale-105">
               <Download className="mr-2" size={20} />
               Download Resume
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -67,6 +70,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

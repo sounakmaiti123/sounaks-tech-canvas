@@ -42,7 +42,7 @@ const Hero = () => {
             </a>
             
             <Link to="/resume" className="inline-flex items-center px-8 py-3 border border-gray-600 rounded-lg text-gray-300 font-medium hover:border-blue-400 hover:text-blue-400 transition-all duration-300 hover:scale-105">
-              <Download className="mr-2" size={20} />
+              <img src="/lovable-uploads/919ec111-2d79-48b1-8de1-c5e3079d3826.png" alt="Resume" className="mr-2 w-5 h-5" />
               Download Resume
             </Link>
 

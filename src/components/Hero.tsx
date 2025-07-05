@@ -42,12 +42,12 @@ const Hero = () => {
             </a>
             
             <Link to="/resume" className="inline-flex items-center px-8 py-3 border border-gray-600 rounded-lg text-gray-300 font-medium hover:border-blue-400 hover:text-blue-400 transition-all duration-300 hover:scale-105">
-              <img src="/lovable-uploads/919ec111-2d79-48b1-8de1-c5e3079d3826.png" alt="Resume" className="mr-2 w-5 h-5" />
+              <img src="/lovable-uploads/919ec111-2d79-48b1-8de1-c5e3079d3826.png" alt="Resume" className="mr-2 w-6 h-6" />
               Download Resume
             </Link>
 
             <a href="https://codolio.com/profile/Sounak_Maiti" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-3 border border-purple-600 rounded-lg text-purple-400 font-medium hover:border-purple-400 hover:text-purple-300 transition-all duration-300 hover:scale-105">
-              <img src="/lovable-uploads/3f55aa1f-59e0-46e1-90a1-ffa18f7a9e59.png" alt="Codolio" className="mr-2 w-5 h-5" />
+              <img src="/lovable-uploads/3f55aa1f-59e0-46e1-90a1-ffa18f7a9e59.png" alt="Codolio" className="mr-2 w-6 h-6" />
               Codolio Profile
             </a>
           </div>

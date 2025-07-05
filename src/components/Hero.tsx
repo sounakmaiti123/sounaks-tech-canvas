@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowRight, Download, Code } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -47,7 +47,7 @@ const Hero = () => {
             </Link>
 
             <a href="https://codolio.com/profile/Sounak_Maiti" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-3 border border-purple-600 rounded-lg text-purple-400 font-medium hover:border-purple-400 hover:text-purple-300 transition-all duration-300 hover:scale-105">
-              <Code className="mr-2" size={20} />
+              <img src="/lovable-uploads/3f55aa1f-59e0-46e1-90a1-ffa18f7a9e59.png" alt="Codolio" className="mr-2 w-5 h-5" />
               Codolio Profile
             </a>
           </div>

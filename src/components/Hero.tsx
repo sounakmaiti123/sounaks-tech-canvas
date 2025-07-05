@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, Code } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -44,6 +45,11 @@ const Hero = () => {
               <Download className="mr-2" size={20} />
               Download Resume
             </Link>
+
+            <a href="https://codolio.com/profile/Sounak_Maiti" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-8 py-3 border border-purple-600 rounded-lg text-purple-400 font-medium hover:border-purple-400 hover:text-purple-300 transition-all duration-300 hover:scale-105">
+              <Code className="mr-2" size={20} />
+              Codolio Profile
+            </a>
           </div>
         </div>
 

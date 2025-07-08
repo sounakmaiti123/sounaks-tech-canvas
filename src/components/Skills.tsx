@@ -1,5 +1,6 @@
 
 import React from 'react';
+import CodolioProfile from './CodolioProfile';
 
 const Skills = () => {
   const skillCategories = [
@@ -46,7 +47,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {skillCategories.map((category, index) => (
             <div key={index} className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700 hover:border-blue-500/50 transition-all duration-300">
               <h3 className="text-2xl font-bold text-white mb-6">{category.title}</h3>
@@ -70,7 +71,12 @@ const Skills = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        {/* Codolio Profile Section */}
+        <div className="mb-16">
+          <CodolioProfile />
+        </div>
+
+        <div className="text-center">
           <div className="inline-block bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-2xl p-8 border border-gray-700">
             <p className="text-gray-300 text-lg">
               <span className="text-blue-400 font-semibold">Currently Learning:</span> Expanding expertise in full stack development to deliver professional-grade websites and applications.

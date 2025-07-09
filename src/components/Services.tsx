@@ -1,31 +1,31 @@
 
 import React from 'react';
-import { Code, Smartphone, Users, Palette } from 'lucide-react';
+import { Database, Code2, BookOpen, Cpu } from 'lucide-react';
 
 const Services = () => {
   const services = [
     {
-      icon: <Palette className="text-blue-400" size={32} />,
-      title: "Responsive Web Design",
-      description: "Creating visually appealing and user-friendly websites that work seamlessly across all devices and screen sizes.",
+      icon: <Code2 className="text-blue-400" size={32} />,
+      title: "Data Structure Implementation",
+      description: "Implementing efficient data structures in C++ including arrays, linked lists, trees, graphs, and hash tables for optimal performance.",
       gradient: "from-blue-500/20 to-cyan-500/20"
     },
     {
-      icon: <Code className="text-green-400" size={32} />,
-      title: "Frontend/Backend Development",
-      description: "Building robust full-stack applications using modern technologies like React, Node.js, and MongoDB.",
+      icon: <Cpu className="text-green-400" size={32} />,
+      title: "Algorithm Development",
+      description: "Developing and optimizing algorithms for sorting, searching, and graph traversal using advanced C++ programming techniques.",
       gradient: "from-green-500/20 to-emerald-500/20"
     },
     {
-      icon: <Users className="text-purple-400" size={32} />,
-      title: "Student Freelance Projects",
-      description: "Collaborating with fellow students and startups to deliver quality web solutions and technical projects.",
+      icon: <Database className="text-purple-400" size={32} />,
+      title: "Database Design & Management",
+      description: "Creating efficient database schemas, optimizing queries, and implementing database management solutions using SQL and MySQL.",
       gradient: "from-purple-500/20 to-violet-500/20"
     },
     {
-      icon: <Smartphone className="text-orange-400" size={32} />,
-      title: "IoT Solutions",
-      description: "Developing innovative IoT applications that bridge the gap between hardware and software systems.",
+      icon: <BookOpen className="text-orange-400" size={32} />,
+      title: "Academic Project Solutions",
+      description: "Collaborating on academic projects involving data structures, algorithms, and database systems for educational purposes.",
       gradient: "from-orange-500/20 to-amber-500/20"
     }
   ];
@@ -40,11 +40,11 @@ const Services = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-4">
-            Currently learning and expanding my expertise in full stack development to deliver professional-grade websites.
+            Currently learning and expanding my expertise in Data Structures using C++ and Database Management Systems.
           </p>
           <div className="inline-block bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-lg px-6 py-3 border border-gray-700">
             <p className="text-gray-400">
-              Available for student collaborations and small-scale projects
+              Available for academic collaborations and algorithm-based projects
             </p>
           </div>
         </div>

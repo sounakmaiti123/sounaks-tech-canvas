@@ -7,28 +7,28 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
+        { name: "C++", level: 90 },
         { name: "C", level: 85 },
         { name: "Java", level: 80 },
-        { name: "JavaScript", level: 75 },
         { name: "Python", level: 70 }
       ]
     },
     {
-      title: "Web Development",
+      title: "Data Structures & Algorithms",
       skills: [
-        { name: "HTML/CSS", level: 90 },
-        { name: "React", level: 75 },
-        { name: "Node.js", level: 70 },
-        { name: "Express", level: 65 }
+        { name: "Arrays & Linked Lists", level: 85 },
+        { name: "Stacks & Queues", level: 80 },
+        { name: "Trees & Graphs", level: 75 },
+        { name: "Sorting & Searching", level: 85 }
       ]
     },
     {
-      title: "Tools & Technologies",
+      title: "Database Management",
       skills: [
-        { name: "MongoDB", level: 70 },
-        { name: "Git/GitHub", level: 85 },
-        { name: "IoT", level: 75 },
-        { name: "Machine Learning", level: 65 }
+        { name: "SQL", level: 80 },
+        { name: "MySQL", level: 75 },
+        { name: "Database Design", level: 70 },
+        { name: "Query Optimization", level: 65 }
       ]
     }
   ];
@@ -43,7 +43,7 @@ const Skills = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Currently upskilling in full stack technologies while building a strong foundation in programming and emerging technologies.
+            Currently mastering Data Structures using C++ and Database Management Systems while building a strong foundation in algorithmic problem-solving.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ const Skills = () => {
         <div className="text-center">
           <div className="inline-block bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-2xl p-8 border border-gray-700">
             <p className="text-gray-300 text-lg">
-              <span className="text-blue-400 font-semibold">Currently Learning:</span> Expanding expertise in full stack development to deliver professional-grade websites and applications.
+              <span className="text-blue-400 font-semibold">Currently Learning:</span> Advanced Data Structures and Database Management Systems to solve complex computational problems efficiently.
             </p>
           </div>
         </div>

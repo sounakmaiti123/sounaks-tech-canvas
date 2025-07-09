@@ -27,12 +27,12 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in delay-200">
-            Aspiring Full Stack Developer & Tech Enthusiast
+            Data Structures & Database Systems Enthusiast
           </p>
           
           <p className="text-gray-400 mb-8 max-w-lg animate-fade-in delay-300">
-            B.Tech student passionate about building innovative solutions with cutting-edge technologies. 
-            Currently mastering full stack development while exploring the intersection of electronics and software.
+            B.Tech student passionate about mastering Data Structures using C++ and Database Management Systems. 
+            Currently exploring algorithmic problem-solving and efficient data storage solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in delay-500">

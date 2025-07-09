@@ -14,7 +14,7 @@ const About = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             I am a B.Tech student of Electronics and Communication Engineering from the Institute of Engineering and Management (IEM), Kolkata. 
-            Passionate about learning new technical skills, I have built a solid foundation in programming and web development technologies.
+            Passionate about learning new technical skills, I have built a solid foundation in Data Structures using C++ and Database Management Systems.
           </p>
         </div>
 
@@ -58,10 +58,10 @@ const About = () => {
             <h3 className="text-2xl font-bold text-white mb-4">Current Focus</h3>
             <div className="space-y-3">
               <p className="text-gray-300">
-                Currently focused on mastering full stack web development while strengthening my foundation in programming languages like C and Java.
+                Currently focused on mastering Data Structures using C++ and Database Management Systems while strengthening my foundation in algorithmic problem-solving.
               </p>
               <p className="text-gray-400">
-                Exploring the integration of hardware and software through IoT projects and machine learning applications.
+                Exploring efficient data organization techniques, database design principles, and optimizing query performance for real-world applications.
               </p>
             </div>
           </div>

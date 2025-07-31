@@ -40,6 +40,84 @@ void loop() {
   delay(500);
 }`;
 
+  const obstacleDetectionCode = `const int trigPin = 12;
+const int echoPin = 13;
+
+// Motor pins
+const int motor1Pin1 = 8;  // IN1
+const int motor1Pin2 = 9;  // IN2
+const int motor2Pin1 = 10; // IN3
+const int motor2Pin2 = 11; // IN4
+
+long duration;
+float distance;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(motor1Pin1, OUTPUT);
+  pinMode(motor1Pin2, OUTPUT);
+  pinMode(motor2Pin1, OUTPUT);
+  pinMode(motor2Pin2, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Measure distance
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2;
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  if (distance < 15) {
+    // Obstacle detected: move backward and turn
+    stopCar();
+    delay(200);
+    moveBackward();
+    delay(500);
+    turnRight();
+    delay(600);
+  } else {
+    // No obstacle: move forward
+    moveForward();
+  }
+}
+
+void moveForward() {
+  digitalWrite(motor1Pin1, HIGH);
+  digitalWrite(motor1Pin2, LOW);
+  digitalWrite(motor2Pin1, HIGH);
+  digitalWrite(motor2Pin2, LOW);
+}
+
+void moveBackward() {
+  digitalWrite(motor1Pin1, LOW);
+  digitalWrite(motor1Pin2, HIGH);
+  digitalWrite(motor2Pin1, LOW);
+  digitalWrite(motor2Pin2, HIGH);
+}
+
+void turnRight() {
+  digitalWrite(motor1Pin1, HIGH);
+  digitalWrite(motor1Pin2, LOW);
+  digitalWrite(motor2Pin1, LOW);
+  digitalWrite(motor2Pin2, HIGH);
+}
+
+void stopCar() {
+  digitalWrite(motor1Pin1, LOW);
+  digitalWrite(motor1Pin2, LOW);
+  digitalWrite(motor2Pin1, LOW);
+  digitalWrite(motor2Pin2, LOW);
+}`;
+
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
   };
@@ -142,6 +220,32 @@ void loop() {
                       </DialogHeader>
                       <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm">
                         <code className="text-green-400">{distanceMeasurerCode}</code>
+                      </pre>
+                    </DialogContent>
+                  </Dialog>
+                ) : project.title === "Obstacle Detection Car" ? (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-300">
+                        <Github size={18} />
+                        Code
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-auto">
+                      <DialogHeader>
+                        <DialogTitle className="flex items-center justify-between">
+                          Obstacle Detection Car - Arduino Code
+                          <button 
+                            onClick={() => copyToClipboard(obstacleDetectionCode)}
+                            className="flex items-center gap-2 px-3 py-1 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-300"
+                          >
+                            <Copy size={16} />
+                            Copy
+                          </button>
+                        </DialogTitle>
+                      </DialogHeader>
+                      <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm">
+                        <code className="text-green-400">{obstacleDetectionCode}</code>
                       </pre>
                     </DialogContent>
                   </Dialog>

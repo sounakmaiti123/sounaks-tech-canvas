@@ -118,6 +118,29 @@ void stopCar() {
   digitalWrite(motor2Pin2, LOW);
 }`;
 
+  const portableEcgCode = `// AD8232 ECG Module - Arduino Interface
+
+const int ecgPin = A0;   // ECG signal from OUTPUT pin
+const int loPlus = 11;   // Lead-off detection +
+const int loMinus = 10;  // Lead-off detection -
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(loPlus, INPUT);
+  pinMode(loMinus, INPUT);
+}
+
+void loop() {
+  // Check if leads are connected
+  if ((digitalRead(loPlus) == 1) || (digitalRead(loMinus) == 1)) {
+    Serial.println("Leads off!");
+  } else {
+    int ecgValue = analogRead(ecgPin);  // ECG signal
+    Serial.println(ecgValue);  // Plot this in Serial Plotter
+  }
+  delay(1);  // Sampling rate ~1ms (1000Hz)
+}`;
+
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
   };
@@ -246,6 +269,32 @@ void stopCar() {
                       </DialogHeader>
                       <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm">
                         <code className="text-green-400">{obstacleDetectionCode}</code>
+                      </pre>
+                    </DialogContent>
+                  </Dialog>
+                ) : project.title === "Portable ECG Sensor" ? (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-300">
+                        <Github size={18} />
+                        Code
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-auto">
+                      <DialogHeader>
+                        <DialogTitle className="flex items-center justify-between">
+                          Portable ECG Sensor - Arduino Code
+                          <button 
+                            onClick={() => copyToClipboard(portableEcgCode)}
+                            className="flex items-center gap-2 px-3 py-1 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-300"
+                          >
+                            <Copy size={16} />
+                            Copy
+                          </button>
+                        </DialogTitle>
+                      </DialogHeader>
+                      <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm">
+                        <code className="text-green-400">{portableEcgCode}</code>
                       </pre>
                     </DialogContent>
                   </Dialog>

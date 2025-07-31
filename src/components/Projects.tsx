@@ -1,8 +1,49 @@
 
-import React from 'react';
-import { ExternalLink, Github, Zap, Car, Wifi, Heart } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink, Github, Zap, Car, Wifi, Heart, Copy } from 'lucide-react';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const Projects = () => {
+  const distanceMeasurerCode = `const int trigPin = 9;
+const int echoPin = 10;
+
+long duration;
+float distanceCm;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Clear trigPin
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  // Trigger the sensor
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  // Read the echo
+  duration = pulseIn(echoPin, HIGH);
+
+  // Calculate distance in cm
+  distanceCm = duration * 0.034 / 2;
+
+  // Print to Serial Monitor
+  Serial.print("Distance: ");
+  Serial.print(distanceCm);
+  Serial.println(" cm");
+
+  delay(500);
+}`;
+
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text);
+  };
+
   const projects = [
     {
       title: "Distance Measurer",
@@ -78,10 +119,38 @@ const Projects = () => {
               </div>
               
               <div className="flex gap-4">
-                <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-300">
-                  <Github size={18} />
-                  Code
-                </button>
+                {project.title === "Distance Measurer" ? (
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-300">
+                        <Github size={18} />
+                        Code
+                      </button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-auto">
+                      <DialogHeader>
+                        <DialogTitle className="flex items-center justify-between">
+                          Distance Measurer - Arduino Code
+                          <button 
+                            onClick={() => copyToClipboard(distanceMeasurerCode)}
+                            className="flex items-center gap-2 px-3 py-1 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-300"
+                          >
+                            <Copy size={16} />
+                            Copy
+                          </button>
+                        </DialogTitle>
+                      </DialogHeader>
+                      <pre className="bg-gray-900 p-4 rounded-lg overflow-x-auto text-sm">
+                        <code className="text-green-400">{distanceMeasurerCode}</code>
+                      </pre>
+                    </DialogContent>
+                  </Dialog>
+                ) : (
+                  <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-300">
+                    <Github size={18} />
+                    Code
+                  </button>
+                )}
                 <button className="flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-400 rounded-lg hover:bg-purple-500/30 transition-colors duration-300">
                   <ExternalLink size={18} />
                   Demo

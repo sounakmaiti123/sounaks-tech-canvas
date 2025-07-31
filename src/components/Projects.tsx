@@ -151,28 +151,48 @@ void loop() {
       description: "An electronics-based tool to measure distance using ultrasonic sensors with high accuracy and real-time display.",
       icon: <Zap className="text-blue-400" size={32} />,
       tags: ["Electronics", "Sensors", "Arduino"],
-      gradient: "from-blue-500/20 to-cyan-500/20"
+      gradient: "from-blue-500/20 to-cyan-500/20",
+      githubUrl: null
     },
     {
       title: "Obstacle Detection Car",
       description: "A smart robotic system that detects and navigates around obstacles using sensors and automated control algorithms.",
       icon: <Car className="text-green-400" size={32} />,
       tags: ["Robotics", "AI", "Sensors"],
-      gradient: "from-green-500/20 to-emerald-500/20"
+      gradient: "from-green-500/20 to-emerald-500/20",
+      githubUrl: null
     },
     {
-      title: "Exhaust Emission Monitoring System",
-      description: "IoT-based smart system to monitor air pollution in vehicles with real-time data collection and analysis.",
+      title: "Agri Flow AI Optimise",
+      description: "AI-powered agricultural optimization platform for improving crop yields and farming efficiency through intelligent data analysis.",
       icon: <Wifi className="text-purple-400" size={32} />,
-      tags: ["IoT", "Environmental", "Monitoring"],
-      gradient: "from-purple-500/20 to-violet-500/20"
+      tags: ["TypeScript", "AI", "Agriculture"],
+      gradient: "from-purple-500/20 to-violet-500/20",
+      githubUrl: "https://github.com/sounakmaiti123/agri-flow-ai-optimise"
     },
     {
       title: "Portable ECG Sensor",
       description: "A portable device for monitoring ECG signals for health tracking with wireless data transmission capabilities.",
       icon: <Heart className="text-red-400" size={32} />,
       tags: ["Healthcare", "Sensors", "Wireless"],
-      gradient: "from-red-500/20 to-pink-500/20"
+      gradient: "from-red-500/20 to-pink-500/20",
+      githubUrl: null
+    },
+    {
+      title: "ML Customer Segmentation",
+      description: "Machine learning project for customer segmentation using clustering algorithms to analyze customer behavior patterns.",
+      icon: <Zap className="text-cyan-400" size={32} />,
+      tags: ["Python", "Machine Learning", "Clustering"],
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      githubUrl: "https://github.com/sounakmaiti123/PRODIGY_ML_02"
+    },
+    {
+      title: "House Price Prediction ML",
+      description: "Linear regression model to predict house prices based on various features like size, location, and amenities.",
+      icon: <Wifi className="text-green-400" size={32} />,
+      tags: ["Python", "Machine Learning", "Regression"],
+      gradient: "from-green-500/20 to-teal-500/20",
+      githubUrl: "https://github.com/sounakmaiti123/PRODIGY_ML_01"
     }
   ];
 
@@ -298,6 +318,16 @@ void loop() {
                       </pre>
                     </DialogContent>
                   </Dialog>
+                ) : project.githubUrl ? (
+                  <a 
+                    href={project.githubUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-300"
+                  >
+                    <Github size={18} />
+                    Code
+                  </a>
                 ) : (
                   <button className="flex items-center gap-2 px-4 py-2 bg-blue-500/20 text-blue-400 rounded-lg hover:bg-blue-500/30 transition-colors duration-300">
                     <Github size={18} />

@@ -8,27 +8,36 @@ const Skills = () => {
       title: "Programming Languages",
       skills: [
         { name: "C++", level: 90 },
-        { name: "C", level: 85 },
-        { name: "Java", level: 80 },
-        { name: "Python", level: 70 }
+        { name: "Python", level: 85 },
+        { name: "JavaScript / TypeScript", level: 75 },
+        { name: "C", level: 80 }
       ]
     },
     {
-      title: "Data Structures & Algorithms",
+      title: "DSA & Problem Solving",
       skills: [
-        { name: "Arrays & Linked Lists", level: 85 },
-        { name: "Stacks & Queues", level: 80 },
-        { name: "Trees & Graphs", level: 75 },
-        { name: "Sorting & Searching", level: 85 }
+        { name: "Arrays & Strings", level: 90 },
+        { name: "Trees & Graphs", level: 80 },
+        { name: "Dynamic Programming", level: 75 },
+        { name: "Competitive Programming", level: 70 }
       ]
     },
     {
-      title: "Database Management",
+      title: "Machine Learning",
       skills: [
-        { name: "SQL", level: 80 },
-        { name: "MySQL", level: 75 },
-        { name: "Database Design", level: 70 },
-        { name: "Query Optimization", level: 65 }
+        { name: "Scikit-learn / Classification", level: 85 },
+        { name: "Regression Models", level: 80 },
+        { name: "Data Preprocessing", level: 85 },
+        { name: "Model Evaluation", level: 80 }
+      ]
+    },
+    {
+      title: "Full Stack Development",
+      skills: [
+        { name: "React / TypeScript", level: 70 },
+        { name: "HTML / CSS / Tailwind", level: 80 },
+        { name: "Node.js / Backend", level: 60 },
+        { name: "SQL / Databases", level: 75 }
       ]
     }
   ];
@@ -43,7 +52,7 @@ const Skills = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Currently mastering Data Structures using C++ and Database Management Systems while building a strong foundation in algorithmic problem-solving.
+            309+ problems solved across platforms with a LeetCode rating of 1496. Building ML projects and transitioning into full-stack development.
           </p>
         </div>
 
@@ -79,7 +88,7 @@ const Skills = () => {
         <div className="text-center">
           <div className="inline-block bg-gradient-to-r from-blue-500/10 to-purple-600/10 rounded-2xl p-8 border border-gray-700">
             <p className="text-gray-300 text-lg">
-              <span className="text-blue-400 font-semibold">Currently Learning:</span> Advanced Data Structures and Database Management Systems to solve complex computational problems efficiently.
+              <span className="text-blue-400 font-semibold">Currently Learning:</span> Full-stack development with React & TypeScript while continuing to strengthen DSA skills and building ML-powered applications.
             </p>
           </div>
         </div>

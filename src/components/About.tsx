@@ -14,7 +14,7 @@ const About = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             I am a B.Tech student of Electronics and Communication Engineering from the Institute of Engineering and Management (IEM), Kolkata. 
-            Passionate about learning new technical skills, I have built a solid foundation in Data Structures using C++ and Database Management Systems.
+            With a strong foundation in Machine Learning and hands-on project experience, I'm now transitioning towards full-stack development while actively sharpening my DSA skills in C++ with 283+ problems solved across platforms.
           </p>
         </div>
 
@@ -58,10 +58,10 @@ const About = () => {
             <h3 className="text-2xl font-bold text-white mb-4">Current Focus</h3>
             <div className="space-y-3">
               <p className="text-gray-300">
-                Currently focused on mastering Data Structures using C++ and Database Management Systems while strengthening my foundation in algorithmic problem-solving.
+                Actively solving DSA problems in C++ (309+ questions, LeetCode rating 1496) while transitioning into full-stack development with projects like EduChain and Nexus AI Chatbot.
               </p>
               <p className="text-gray-400">
-                Exploring efficient data organization techniques, database design principles, and optimizing query performance for real-world applications.
+                Building on my ML expertise with real-world projects in healthcare prediction and NLP, while developing modern web applications using React, TypeScript, and AI integrations.
               </p>
             </div>
           </div>

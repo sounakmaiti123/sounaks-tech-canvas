@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ExternalLink, Github, Zap, Car, Wifi, Heart, Copy } from 'lucide-react';
+import { ExternalLink, Github, Zap, Car, Wifi, Heart, Copy, Brain, BookOpen, MessageSquare } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
 const Projects = () => {
@@ -147,6 +147,62 @@ void loop() {
 
   const projects = [
     {
+      title: "Nexus AI Chatbot",
+      description: "A full-stack AI Chatbot (Nexus AI) with frontend and backend, featuring conversational AI capabilities and modern UI design.",
+      icon: <MessageSquare className="text-blue-400" size={32} />,
+      tags: ["CSS", "AI", "Full Stack"],
+      gradient: "from-blue-500/20 to-indigo-500/20",
+      githubUrl: "https://github.com/sounakmaiti123/nexus-ai-chatbot"
+    },
+    {
+      title: "EduChain",
+      description: "A modern AI-powered e-learning platform frontend with premium dark UI, intro video onboarding, authentication flow, and polished micro-interactions.",
+      icon: <BookOpen className="text-emerald-400" size={32} />,
+      tags: ["CSS", "JavaScript", "E-Learning"],
+      gradient: "from-emerald-500/20 to-green-500/20",
+      githubUrl: "https://github.com/sounakmaiti123/EduChain"
+    },
+    {
+      title: "Coronary Artery Disease Prediction",
+      description: "An early risk prediction system using machine learning to classify patient outcomes for Coronary Artery Disease (CAD), one of the leading causes of mortality worldwide.",
+      icon: <Heart className="text-red-400" size={32} />,
+      tags: ["Python", "Machine Learning", "Healthcare"],
+      gradient: "from-red-500/20 to-pink-500/20",
+      githubUrl: "https://github.com/sounakmaiti123/Coronary-Artery-Disease-Prediction"
+    },
+    {
+      title: "Breast Cancer Classification ML",
+      description: "Data loading & preprocessing, model training with Logistic Regression, evaluation using Accuracy, ROC curve, Confusion Matrix, and SHAP integration.",
+      icon: <Brain className="text-purple-400" size={32} />,
+      tags: ["Python", "Machine Learning", "Classification"],
+      gradient: "from-purple-500/20 to-violet-500/20",
+      githubUrl: "https://github.com/sounakmaiti123/breast-cancer-classification-ML"
+    },
+    {
+      title: "Agri Flow AI Optimise",
+      description: "AI-powered agricultural optimization platform for improving crop yields and farming efficiency through intelligent data analysis.",
+      icon: <Wifi className="text-green-400" size={32} />,
+      tags: ["TypeScript", "AI", "Agriculture"],
+      gradient: "from-green-500/20 to-teal-500/20",
+      githubUrl: "https://github.com/sounakmaiti123/agri-flow-ai-optimise"
+    },
+    {
+      title: "ML Customer Segmentation",
+      description: "Machine learning project for customer segmentation using clustering algorithms to analyze customer behavior patterns.",
+      icon: <Zap className="text-cyan-400" size={32} />,
+      tags: ["Python", "Machine Learning", "Clustering"],
+      gradient: "from-cyan-500/20 to-blue-500/20",
+      githubUrl: "https://github.com/sounakmaiti123/PRODIGY_ML_02"
+    },
+    {
+      title: "House Price Prediction ML",
+      description: "Linear regression model to predict house prices based on various features like size, location, and amenities.",
+      icon: <Wifi className="text-yellow-400" size={32} />,
+      tags: ["Python", "Machine Learning", "Regression"],
+      gradient: "from-yellow-500/20 to-orange-500/20",
+      githubUrl: "https://github.com/sounakmaiti123/PRODIGY_ML_01"
+    },
+    {
       title: "Distance Measurer",
       description: "An electronics-based tool to measure distance using ultrasonic sensors with high accuracy and real-time display.",
       icon: <Zap className="text-blue-400" size={32} />,
@@ -163,36 +219,12 @@ void loop() {
       githubUrl: null
     },
     {
-      title: "Agri Flow AI Optimise",
-      description: "AI-powered agricultural optimization platform for improving crop yields and farming efficiency through intelligent data analysis.",
-      icon: <Wifi className="text-purple-400" size={32} />,
-      tags: ["TypeScript", "AI", "Agriculture"],
-      gradient: "from-purple-500/20 to-violet-500/20",
-      githubUrl: "https://github.com/sounakmaiti123/agri-flow-ai-optimise"
-    },
-    {
       title: "Portable ECG Sensor",
       description: "A portable device for monitoring ECG signals for health tracking with wireless data transmission capabilities.",
       icon: <Heart className="text-red-400" size={32} />,
-      tags: ["Healthcare", "Sensors", "Wireless"],
+      tags: ["Healthcare", "Sensors", "Arduino"],
       gradient: "from-red-500/20 to-pink-500/20",
       githubUrl: null
-    },
-    {
-      title: "ML Customer Segmentation",
-      description: "Machine learning project for customer segmentation using clustering algorithms to analyze customer behavior patterns.",
-      icon: <Zap className="text-cyan-400" size={32} />,
-      tags: ["Python", "Machine Learning", "Clustering"],
-      gradient: "from-cyan-500/20 to-blue-500/20",
-      githubUrl: "https://github.com/sounakmaiti123/PRODIGY_ML_02"
-    },
-    {
-      title: "House Price Prediction ML",
-      description: "Linear regression model to predict house prices based on various features like size, location, and amenities.",
-      icon: <Wifi className="text-green-400" size={32} />,
-      tags: ["Python", "Machine Learning", "Regression"],
-      gradient: "from-green-500/20 to-teal-500/20",
-      githubUrl: "https://github.com/sounakmaiti123/PRODIGY_ML_01"
     }
   ];
 
